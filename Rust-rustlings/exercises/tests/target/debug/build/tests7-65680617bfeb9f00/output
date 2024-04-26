@@ -1,0 +1,2 @@
+cargo:rustc-env=TEST_FOO=1714051802
+cargo:rustc-cfg=pass
