@@ -2,9 +2,9 @@
 ## 2024 Spring/Summer Open Source Operating System Training Camp
 
 ### What i have done
-[x] Rust
-[x] rCore 
-[x] async OS kernel
+* [x] Rust
+* [x] rCore 
+* [x] async OS kernel
 
 ### Directory
 - Report：Notes and reports during the training camp process
