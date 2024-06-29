@@ -1,0 +1,16 @@
+/target
+/.vscode
+.DS_Store
+*.asm
+*.img
+actual.out
+qemu.log
+rusty-tags.vi
+.idea/
+arceos-fada.bin.gz
+arceos-fada.itb
+.tmp_its
+!tools/rk3588/ramdisk.img
+linker_*
+kernel-qemu
+apps/monolithic_userboot/monolithic_userboot*

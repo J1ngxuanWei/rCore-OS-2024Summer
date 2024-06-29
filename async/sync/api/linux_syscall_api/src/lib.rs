@@ -41,8 +41,3 @@ pub(crate) fn deal_result(result: SyscallResult) -> isize {
         Err(error) => -(error.code() as isize),
     }
 }
-
-pub fn yield_to_test(){
-    //axtask::yield_now_task();
-    axtask::executor::run_all();
-}

@@ -109,5 +109,18 @@ pub fn run_testcase(testcase: &str, envs: Vec<String>) {
     }
 
     let user_task = axtask::Task::init(args_vec, &envs).unwrap();
-    //recycle_user_process();
+    let now_task_id = user_task.tid() as isize;
+    let mut exit_code = 0;
+    loop {
+        if unsafe { wait_pid(now_task_id, &mut exit_code as *mut i32) }.is_ok() {
+            break;
+        }
+        yield_now_task();
+    }
+    recycle_user_process();
+    // axlog::ax_println!(
+    //     "Testcase {} finished with exit code {}",
+    //     testcase,
+    //     exit_code
+    // );
 }
